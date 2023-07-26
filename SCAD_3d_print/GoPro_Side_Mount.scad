@@ -1,13 +1,13 @@
 thickness = 3.0;
 base = 1.0;
-width = 28.0;
+width = 28.5;
 height = 19;        // made 1mm larger
 hole_width = 10.0;
 hole_height = 10.0;
-hole_NE_x = 12.5;   // was 12.5 (12.5+10+5.5 = 28)
+hole_NE_x = 6.5;//12.5;   // was 12.5 (d5512.5+10+5.5 = 28)
 hole_NE_y = 2;
 
-pin_x = 17;     // was 17
+pin_x = 11;     // was 17
 pin_y = 6.5;
 pin_width = 1.0;
 pin_bredth = 1.0;
@@ -22,7 +22,7 @@ cut_out_E_y_offset=height;
 
 wire_notch_upper_N_y_offset=5.125;
 wire_notch_lower_N_y_offset=8.125;
-wire_notch_length=12;
+wire_notch_length=6.5;
 
 
 cross_hair_90_degree_length=7;
@@ -50,10 +50,10 @@ translate([0,0,1])
                 polygon(points=[[cut_out_N_x_offset,cut_out_N_y_offset],[cut_out_S_x_offset,cut_out_S_y_offset],[cut_out_E_x_offset,cut_out_E_y_offset]]);
 
 // was 22.5
-        translate ([22,wire_notch_upper_N_y_offset,0])
+        translate ([0,wire_notch_upper_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
-        translate ([22,wire_notch_lower_N_y_offset,0])
+        translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
     }
 
