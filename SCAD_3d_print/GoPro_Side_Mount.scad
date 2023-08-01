@@ -1,13 +1,13 @@
-thickness = 3.0;
+thickness = 3.5; // was 3, trying 3.5 and 4
 base = 1.0;
 width = 28.5;
 height = 19;        // made 1mm larger
-hole_width = 10.0;
+hole_width = 11.0;
 hole_height = 10.0;
 hole_NE_x = 6.5;//12.5;   // was 12.5 (d5512.5+10+5.5 = 28)
 hole_NE_y = 2;
 
-pin_x = 11;     // was 17
+pin_x = 12;     // was 17
 pin_y = 6.5;
 pin_width = 1.0;
 pin_bredth = 1.0;
