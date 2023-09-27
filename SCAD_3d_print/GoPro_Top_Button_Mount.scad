@@ -22,7 +22,7 @@ cut_out_SE_y_offset=height;
 
 wire_notch_upper_N_y_offset=5;
 wire_notch_lower_N_y_offset=8;
-wire_notch_length=9;
+wire_notch_length=14;
 
 cross_hair_90_degree_length=9;      // increased by 2mm
 cross_hair_thickness = 0.5;
@@ -45,10 +45,10 @@ translate([0,0,1])
             translate([0,0,thickness])
                 polygon(points=[[cut_out_NE_x_offset,cut_out_NE_y_offset],[cut_out_SW_x_offset,cut_out_SW_y_offset],[cut_out_SE_x_offset,cut_out_SE_y_offset]]);
 
-        translate ([22.5,wire_notch_upper_N_y_offset,0])
+        translate ([0,wire_notch_upper_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
-        translate ([22.5,wire_notch_lower_N_y_offset,0])
+        translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
     }
