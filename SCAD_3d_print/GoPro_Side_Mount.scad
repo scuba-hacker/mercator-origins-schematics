@@ -23,6 +23,7 @@ cut_out_E_y_offset=height;
 wire_notch_upper_N_y_offset=5.125;
 wire_notch_lower_N_y_offset=8.125;
 wire_notch_length=6.5;
+wire_notch_base_length=1;
 
 
 cross_hair_90_degree_length=7;
@@ -49,12 +50,12 @@ translate([0,0,1])
             translate([0,0,thickness])
                 polygon(points=[[cut_out_N_x_offset,cut_out_N_y_offset],[cut_out_S_x_offset,cut_out_S_y_offset],[cut_out_E_x_offset,cut_out_E_y_offset]]);
 
-// was 22.5
         translate ([0,wire_notch_upper_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
         translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
+
     }
 
     difference()
@@ -73,5 +74,14 @@ translate([0,0,1])
         linear_extrude(height = thickness, center = false)
             translate([0,0,thickness])
                 polygon(points=[[cut_out_N_x_offset,cut_out_N_y_offset],[cut_out_S_x_offset,cut_out_S_y_offset],[cut_out_E_x_offset,cut_out_E_y_offset]]);
+
+
+        translate ([0,wire_notch_upper_N_y_offset,0])
+            cube([wire_notch_base_length,1,thickness]);
+
+        translate ([0,wire_notch_lower_N_y_offset,0])
+            cube([wire_notch_base_length,1,thickness]);
+
+
 
     }
