@@ -1,3 +1,11 @@
+// https://github.com/jon-gilbert/openscad_attachable_text3d/wiki/Installation
+use <fontmetrics.scad>;
+
+//font = "Liberation Sans Narrow:style=Bold";
+font = "Arial:style=Bold";
+font_size = 5;
+h = ascender(font)-descender(font);
+
 thickness = 3.5; // was 3, trying 3.5 and 4
 base = 1.0;
 width = 28.5;
@@ -56,6 +64,11 @@ translate([0,0,1])
         translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
+        rotate([180,180,0])
+            translate([-25,-18,thickness-1.5])
+                    linear_extrude(height=0.5) union() {  
+                        translate([0,0]) drawText("SIDE", font=font, size=font_size);
+                }
     }
 
     difference()
@@ -81,7 +94,4 @@ translate([0,0,1])
 
         translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_base_length,1,thickness]);
-
-
-
     }
