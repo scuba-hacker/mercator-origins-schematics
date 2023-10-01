@@ -29,7 +29,7 @@ cut_out_SE_y_offset=height;
 wire_notch_upper_N_y_offset=5;
 wire_notch_lower_N_y_offset=8;
 wire_notch_length=14;
-wire_notch_base_length=1;
+wire_notch_base_length=2;
 
 cross_hair_90_degree_length=9;      // increased by 2mm
 cross_hair_thickness = 0.5;
