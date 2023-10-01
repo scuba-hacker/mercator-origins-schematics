@@ -1,3 +1,9 @@
+// https://github.com/jon-gilbert/openscad_attachable_text3d/wiki/Installation
+use <fontmetrics.scad>;
+
+font = "Arial:style=Bold";
+font_size = 5;
+
 thickness = 4.0;
 base = 1.0;
 width = 30.5;       // increased from 28 to 30, increased to 30.5
@@ -22,7 +28,8 @@ cut_out_SE_y_offset=height;
 
 wire_notch_upper_N_y_offset=5;
 wire_notch_lower_N_y_offset=8;
-wire_notch_length=9;
+wire_notch_length=14;
+wire_notch_base_length=1;
 
 cross_hair_90_degree_length=9;      // increased by 2mm
 cross_hair_thickness = 0.5;
@@ -45,11 +52,17 @@ translate([0,0,1])
             translate([0,0,thickness])
                 polygon(points=[[cut_out_NE_x_offset,cut_out_NE_y_offset],[cut_out_SW_x_offset,cut_out_SW_y_offset],[cut_out_SE_x_offset,cut_out_SE_y_offset]]);
 
-        translate ([22.5,wire_notch_upper_N_y_offset,0])
+        translate ([0,wire_notch_upper_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
 
-        translate ([22.5,wire_notch_lower_N_y_offset,0])
+        translate ([0,wire_notch_lower_N_y_offset,0])
             cube([wire_notch_length,1,thickness]);
+
+        rotate([180,180,0])
+            translate([-25,-18,thickness-1.5])
+                    linear_extrude(height=0.5) union() {  
+                        translate([0,0]) drawText("TOP", font=font, size=font_size);
+                }
 
     }
 
@@ -69,5 +82,11 @@ translate([0,0,1])
         linear_extrude(height = thickness, center = false)
             translate([0,0,thickness])
                 polygon(points=[[cut_out_NE_x_offset,cut_out_NE_y_offset],[cut_out_SW_x_offset,cut_out_SW_y_offset],[cut_out_SE_x_offset,cut_out_SE_y_offset]]);
+
+        translate ([0,wire_notch_upper_N_y_offset,0])
+            cube([wire_notch_base_length,1,thickness]);
+
+        translate ([0,wire_notch_lower_N_y_offset,0])
+            cube([wire_notch_base_length,1,thickness]);
     }
-    
+  
