@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Lemon GPS Float")(type "Legacy")(uri "${KIPRJMOD}")(options "")(descr ""))
+  (lib (name "Lemon-GPS-Float-Library")(type "KiCad")(uri "${KIPRJMOD}/Lemon-GPS-Float-Library.kicad_sym")(options "")(descr ""))
+)
