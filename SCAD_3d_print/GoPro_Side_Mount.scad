@@ -6,7 +6,7 @@ font = "Arial:style=Bold";
 font_size = 5;
 h = ascender(font)-descender(font);
 
-thickness = 4; // was 3, 3.5 which were too thin and then 4 seems closest - may have to increase to 4.5
+thickness = 5;
 base = 1.0;
 width = 28.5;
 height = 19;
