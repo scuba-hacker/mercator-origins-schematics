@@ -1,10 +1,32 @@
 // Original battery dimensions (26800 cell)
 // Dia: 26.8 mm   Length: 85.9 mm      Length without +ve: 84.7 mm
 
-// New battery dimensions
-// Dia: 26.5 mm (not measured) Length: 68.2mm
+
+// ACTUAL NEW BATTERY DIMENSIONS
+// Dia: 26.1mm Body Length: 68mm.2, flat button length: 1.3mm
+
+// Length of shunt (inc. button) needed: 85.9mm - 68.2mm - 1.3mm = 16.4 mm
+
+// starting length of shunt: 18.4mm centre, 17.77mm edge
+//      (remove 2mm from centre, and then form button)
+
+// keep flat end for connection against new battery +ve
+
+// old battery button dimensions:
+ 
+        // button length: 1.3mm
+        // base diameter 9.5mm
+        // top diameter  7.4mm
+        // indentation: 0.43mm
+
+
+
+
 
 // Measured Torch internal diameter: 27.6mm
+
+// Advertised New battery dimensions
+// Dia: 26.5 mm (not measured) Length: 68.2mm
 
 
 // Veroboard of 1.3mm at both ends
