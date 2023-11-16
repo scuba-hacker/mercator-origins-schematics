@@ -1,9 +1,34 @@
+// Old batt: 2.94V - doesn't work at all in or out of the tube with wires.
+// New batt: 3.53V - works out of tube with wires, not in the tube.
+// test batt: 3.70V - works out of tube with wires.
+
+// Hypothesis 16 Nov: the button isn't mating to the positive terminal of torch
+
+// currently charge light flashes on very briefly when end cap installed - this is different to there not being any battery present, suggesting lack of connection at postive end. Same thing happens with old battery in place though.
+
+
+// Newly measured old battery length inc button == 85.7mm
+
+// New battery length inc button == 69.5mm
+
+// New button shunt length = 18mm inc button
+
+// Current length new batt+shunt = 87.5mm   (--> target is 85.7mm)
+// take off 1.8 mm
+
 // Original battery dimensions (26800 cell)
 // Dia: 26.8 mm   Length: 85.9 mm      Length without +ve: 84.7 mm
 
 
 // ACTUAL NEW BATTERY DIMENSIONS
 // Dia: 26.1mm Body Length: 68mm.2, flat button length: 1.3mm
+
+
+
+// old batt jacket protusion at +ve is 0.4mm
+
+
+
 
 // Length of shunt (inc. button) needed: 85.9mm - 68.2mm - 1.3mm = 16.4 mm
 
