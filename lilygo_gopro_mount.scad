@@ -21,13 +21,25 @@ outer_h = 5.9;
 
 outer_radius=13;
 
-insert_l = interior_l + 0.5;    // made .5mm longer than aperature
-insert_w = interior_w + 0.5;    // made .5mm wider than aperature
+//insert_l = interior_l + 0.5;    // made .5mm longer than aperature      // ACTUAL PRINT WIDTH = 53.5 instead of 53 (correction is -0.5)
+//insert_w = interior_w + 0.5;    // made .5mm wider than aperature       // ACTUAL PRINT LENGTH = 74.75 instead of 74.3 (correction is -0.45)
+
+insert_l = interior_l + -0.5;    // corrected for next print 16 Jan (make exact interior length)
+insert_w = interior_w + -0.45;   // corrected for next print 16 Jan (make exact interior width)
+
+
+// 11/01 New measured cut width of insert: (needs removing from gopro case)
+// 11/01  New measured cut length of insert: (needs removing from gopro case)
+
 insert_h = 1.5;
 
-screen_l = 56.2;   // measure
-screen_w = 43.9;   // measure
+screen_l = 56.2;   // measure       (11/01 measured again to be 56.2)   (11/01 measured inner ridge frame 55.73mm length)
+screen_w = 43.9;   // measure       (11/01 measured again to be 43.9)   (11/01 measured inner ridth frame 43.35mm width)
 screen_h = 1;
+
+// screen has 3mm overlap on header short edge (currently 1.7mm), and 2mm overlap on lcd flex short edge (currently 1.85mm)
+//screen has 2.35mm  overlap on antenna long edge and 2.7mm overlap on usb long edge
+
 
 ridge_thickness = 1;
 
@@ -97,7 +109,10 @@ difference()
             $fn=30,anchor=[-1,-1,-1]);
 
 }
-
+/*
+// Not required
+// ****  error here is assuming the circuit board is centrally locally x/y  ****
+//
 // ridge to hold screen in place size of display, on back of insert
 difference()       // (larger piece - smaller piece)
 {
@@ -115,14 +130,17 @@ difference()       // (larger piece - smaller piece)
             edges=[RIGHT+BACK, RIGHT+FRONT, LEFT+BACK,LEFT+FRONT],
             $fn=30,anchor=[-1,-1,-1]);
 }
+*/
 
+/*
+// not feasible
 // peg for pulling the insert out of the gopro case
 translate([5,38,z_offset+insert_h])
     cylinder(h=8,r=2);
-
+*/
       
 // Go pro back
-
+/*
 // top one, 
 difference()
 {
@@ -159,4 +177,4 @@ difference()
     
 }
 
-
+*/
