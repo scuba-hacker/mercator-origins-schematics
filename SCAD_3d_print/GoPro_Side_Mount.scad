@@ -1,5 +1,5 @@
 // https://github.com/jon-gilbert/openscad_attachable_text3d/wiki/Installation
-use <fontmetrics.scad>;
+use <openscad_attachable_text3d/fontmetrics.scad>;
 
 //font = "Liberation Sans Narrow:style=Bold";
 font = "Arial:style=Bold";
